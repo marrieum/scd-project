@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ Airlines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Log-in OR Sign-up</a></li>
+          
+            <li><a href="reschedulexcancel.html">Reschedule/Cancel</a></li>
+
+            <li><a href="boarding.html">Boarding Pass</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="logo">
+        <img src="mj-airlines-logo.jpeg" alt="MJ Airlines Logo">
+    </div>
+</header>
+
+<form id="booking-form">
+    <h2>Book Your Flight</h2>
+
+    <label for="departure">Departure:</label>
+    <input type="text" id="departure" name="departure" placeholder="Enter departure city">
+
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" placeholder="Enter destination city">
+
+    <label for="departure-date">Departure Date:</label>
+    <input type="date" id="departure-date" name="departure-date">
+
+    <label for="return-date">Return Date:</label>
+    <input type="date" id="return-date" name="return-date">
+
+    <label for="passengers">Number of Passengers:</label>
+    <input type="number" id="passengers" name="passengers" min="1">
+
+    <label for="class">Class:</label>
+    <select id="class" name="class">
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+        <option value="first">First Class</option>
+    </select>
+
+    <button type="submit">Book Now</button>
+</form>
+
+<script>
+    const bookingForm = document.getElementById('booking-form');
+
+    bookingForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form values
+        const departure = document.getElementById('departure').value;
+        const destination = document.getElementById('destination').value;
+        const departureDate = document.getElementById('departure-date').value;
+        const returnDate = document.getElementById('return-date').value;
+        const passengers = document.getElementById('passengers').value;
+        const classType = document.getElementById('class').value;
+
+        // Display confirmation message (you can customize this)
+        alert(`Your flight from ${departure} to ${destination} has been booked.\n
+        Departure Date: ${departureDate}\n
+        Return Date: ${returnDate}\n
+        Passengers: ${passengers}\n
+        Class: ${classType}`);
+
+        // You can add more complex logic here, such as:
+        // - Sending form data to a server-side script
+        // - Redirecting the user to a confirmation page
+        // - Storing booking information in local storage or cookies
+    });
+</script>
+</html>

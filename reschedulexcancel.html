@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ 1  Airlines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="login.html">Log-in OR Sign-up</a></li>
+            <li><a href="book.html">Book a Flight</a></li>
+            <li><a href="boarding.html">Boarding Pass</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul> 
+    </nav>
+    <div class="logo">
+        <img src="mj-airlines-logo.jpeg" alt="MJ Airlines Logo">
+    </div>
+</header>
+
+<section id="reschedule-flight">
+    <div class="container">
+        <h2>Reschedule Your Flight</h2>
+        <form id="rescheduleForm">
+            <label for="booking-reference">Booking Reference:</label>
+            <input type="text" id="booking-reference" name="booking_reference" required>
+            <label for="new-date">New Departure Date:</label>
+            <input type="date" id="new-date" name="new_date" required>
+            <button type="submit">Reschedule Flight</button>
+        </form>
+    </div>
+</section>
+
+<section id="cancel-flight">
+    <div class="container">
+        <h2>Cancel Your Flight</h2>
+        <form id="cancelForm">
+            <label for="booking-reference">Booking Reference:</label>
+            <input type="text" id="booking-reference" name="booking_reference" required>
+            <button type="submit">Cancel Flight</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    // Reschedule Flight Form
+    const rescheduleForm = document.getElementById('rescheduleForm');
+    rescheduleForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const bookingReference = document.getElementById('booking-reference').value;
+        const newDate = document.getElementById('new-date').value;
+
+        // Send a request to your server to reschedule the flight
+        // ... (e.g., using fetch API or AJAX)
+
+        // Display a confirmation message
+        alert(`Your flight has been rescheduled to ${newDate}`);
+    });
+
+    // Cancel Flight Form
+    const cancelForm = document.getElementById('cancelForm');
+    cancelForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const bookingReference = document.getElementById('booking-reference').value;
+
+        // Send a request to your server to cancel the flight
+        // ... (e.g., using fetch API or AJAX)
+
+        // Display a confirmation message
+        alert('Your flight has been canceled.');
+    });
+</script>
+
+</html>

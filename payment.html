@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Log-in OR Sign-up</a></li>
+            <li><a href="book.html">Book a Flight</a></li>
+            <li><a href="reschedulexcancel.html">Reschedule/Cancel</a></li>
+            <li><a href="boarding.html">Boarding Pass</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="logo">
+        <img src="mj-airlines-logo.jpeg" alt="MJ Airlines Logo">
+    </div>
+</header>
+<body>
+    <div class="container">
+        <h2>Payment Information</h2>
+
+        <form id="paymentForm">
+            <label for="cardholder-name">Card-holder Name</label>
+            <input type="text" id="cardholder-name" name="card-holder-name" required>
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" required>
+
+            <div class="card-details-row">
+                <div class="card-detail">
+                    <label for="card-expiry">Expiry Date</label>
+                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+                </div>
+                <div class="card-detail">
+                    <label for="card-cvv">CVV</label>
+                    <input type="text" id="card-cvv" name="card-cvv" placeholder="XXX" required>
+                </div>
+            </div>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <script>
+        const paymentForm = document.getElementById('paymentForm');
+
+        paymentForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // Get card details
+            const cardholderName = document.getElementById('cardholder-name').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('card-expiry').value;
+            const cvv = document.getElementById('card-cvv').value;
+
+            // Simulate payment processing (replace with actual payment gateway integration)
+            // ... (e.g., send a request to a payment gateway API)
+
+            // Display a confirmation message or redirect to a success page
+            alert('Payment successful!');
+            // Or, redirect to a success page:
+            // window.location.href = 'payment-success.html';
+        });
+    </script>
+</body>
+</html>

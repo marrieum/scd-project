@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ Airlines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+            
+                <li><a href="login.html">Log-in OR Sign-up</a></li>
+                <li><a href="book.html">Book a Flight</a></li>
+                <li><a href="reschedulexcancel.html">Reschedule/Cancel</a></li>
+                <li><a href="boarding.html">Boarding Pass</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="about.html">About Us</a></li>
+        
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="mj-airlines-logo.jpeg" alt="MJ Airlines Logo">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="hero-image.jpg" alt="Hero Image">
+            <h1>Fly MJ Airlines</h1>
+            <p>Your Journey, Our Priority</p>
+            <button onclick="redirectToBooking()">Book Now</button>
+        </section>
+        
+        <script>
+            function redirectToBooking() {
+                window.location.href = "file:///C:/Users/HAMZA/Desktop/mj/book.html"; // Replace "booking.html" with the actual URL of your booking page
+            }
+        </script>
+        <script src="usermanagement.js">   
+        </script>
+        <script src="observer.js">   
+        </script>
+        </section>
+
+        <section class="destinations">
+            <h2>Explore Our Destinations</h2>
+            <div class="destination-card">
+                <img src="destination1.jpg" alt="Destination 1">
+                <h3>Destination 1:King Khalid International Airport (Your Gateway to Saudi Arabia)</h3>
+                <p>King Khalid International Airport: 
+                    King Khalid International Airport, located in Riyadh, Saudi Arabia, is a major international hub offering a wide range of domestic and international flights.
+                 Renowned for its modern facilities, efficient services, and distinctive Islamic architecture, the airport provides a comfortable and memorable travel experience. 
+                    </p>
+            </div>
+            <div class="destination-card">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 2:London City Airport (Your Express Gateway to London)</h3>
+                <p>
+                    London City Airport offers a unique and convenient travel experience to the heart of London. Known for its efficient operations and prime location, the airport provides quick access to the city’s financial district and other key areas. With its modern facilities, friendly staff, and a focus on a seamless passenger journey, London City Airport is the ideal choice for both business and leisure travelers seeking a hassle-free travel experience.</p>
+            </div>
+            <div class="destination-card">
+                <img src="destination3.jpg" alt="Destination 3">
+                <h3>Destination 3:Toronto Pearson International Airport (Your Gateway to Canada)</h3>
+                <p>
+                    Toronto Pearson International Airport is Canada's largest and busiest airport, serving as a major hub for both domestic and international flights. Located in Mississauga, Ontario, it offers a wide range of amenities, including duty-free shopping, dining options, and comfortable lounges. With its strategic location and extensive flight network, Toronto Pearson is a popular gateway to Canada and a key connection point for travelers worldwide.</p>
+            </div>
+            </section>
+
+        <section class="about-us">
+            <h2>About MJ Airlines</h2>
+            <p>MJ Airlines is a premier airline committed to providing exceptional air travel experiences. With a focus on passenger comfort, safety, and punctuality, we strive to exceed expectations. Our dedicated team is passionate about delivering seamless journeys, whether you're a frequent flyer or a first-time traveler. Explore our diverse network of destinations and experience the difference of flying MJ Airlines.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p style="display: flex; justify-content: space-between;">
+          <span>&copy; 2024 MJ Airlines. All Rights Reserved.</span>
+          <span>
+            <a href="tel:+923705954448">Phone: +92 370 5954448</a> | 
+            <a href="mailto:arifmaryam326@gmail.com">Email: arifmaryam326@gmail.com</a>
+          </span>
+        </p>
+      </footer>
+</body>
+</html>

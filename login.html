@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ Airlines Login</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book a Flight</a></li>
+                <li><a href="reschedulexcancel.html">Reschedule/Cancel</a></li>
+                <li><a href="boarding.html">Boarding Pass</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="mj-airlines-logo.jpeg" alt="MJ Airlines Logo">
+        </div>
+    </header>
+    <div class="container">
+        <div class="login-signup">
+            <div class="form-container">
+                <form id="login-form">
+                    <h2>Login</h2>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="submit">Log In</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleForm('signup')">Sign Up</a></p>
+                </form>
+                <form id="signup-form" style="display: none;">
+                    <h2>Sign Up</h2>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="toggleForm('login')">Log In</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+
+            if (formId === 'login') {
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            }
+
+            const userManager = UserManager.getInstance();
+
+// Set user data
+userManager.setUserData('email', 'user@example.com');
+
+// Get user data
+const userEmail = userManager.getUserData('email');
+console.log(userEmail); // Output: user@example.com
+        }
+    </script>
+</body>
+</html>
+
+
+
